@@ -11,7 +11,7 @@
             margin: 0 2.25rem;
         }
         @include desktop {
-            margin: 0 6rem;
+            margin: 2rem 6rem;
         }
     }
     &__image-container {
@@ -41,11 +41,13 @@
         @include sub-header;
         color: $BandSite-Black;
         margin: 1rem 1rem 0rem 1rem;
+        
         @include tablet {
             margin: 2.25rem 6rem 0 6rem;
         }
         @include desktop {
             margin: 2.25rem 12rem 0 12rem;
+            width: 60%;
         }
     }
     &__quote-source {
@@ -58,6 +60,7 @@
         }
         @include desktop {
             margin: .5rem 12rem 0 12rem;
+            font-size: 1.4rem;
         }
     }
     &__article-header {
@@ -77,7 +80,7 @@
         @include tablet {
             flex-direction: row;
             justify-content: space-between;
-            margin: 2rem 6rem 0 6rem;
+            margin: 1rem 6rem 0 6rem;
         }
         @include desktop {
             margin: 0 12rem;
@@ -89,6 +92,10 @@
         line-height: 1.2rem;
         @include tablet {
             width: 45%;
+        }
+        @include desktop {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
         }
     }
 }

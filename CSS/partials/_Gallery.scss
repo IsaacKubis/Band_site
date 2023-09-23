@@ -39,9 +39,14 @@
     &__img {
         width: 100%;
         aspect-ratio: 16/9;
+        filter: grayscale(100%);
+        filter: gray;
         @include tablet {
             width: 30%;
             flex-grow: 1;
         }
+    }
+    &__img:hover {
+        filter: none;
     }
 }
