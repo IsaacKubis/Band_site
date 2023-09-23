@@ -1,0 +1,132 @@
+@use 'mixins-fonts' as *;
+@use 'variables' as *;
+@use 'mixins-media' as *;
+
+.footer {
+    background: $BandSite-Black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__contacts-section, &__header-section {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+    &__header-section {
+        margin-left: 1rem;
+        order: 1;
+        @include tablet {
+            margin-left: 3rem;
+            width: 50%;
+        }
+        @include desktop {
+            margin-left: 6rem;
+        }
+    }
+    &__contacts-section {
+        order: 2;
+        @include tablet {
+            order: 3;
+        }
+    }
+    &__logo-section {
+        margin-left: 1rem;
+        order: 3;
+        @include tablet {
+            width: 20%;
+            margin-left: 3rem;
+            order: 2;
+        }
+        @include desktop {
+            margin-left: 6rem;
+        }
+    }
+    &__copyright-section {
+        order: 4;
+        margin-left: 1rem;
+        width: 100%;
+        @include tablet {
+            margin-left: 3rem;
+        }
+        @include desktop {
+            margin-left: 6rem;
+        }
+    }
+    &__logo-container {
+        max-width: 120px;
+        max-height: 20px;
+        margin-top: 4rem;
+        @include tablet {
+            padding-bottom: 1.75rem;
+            margin-top: 5.5rem;
+        }
+    }
+    &__section {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            margin-left: 3rem;
+        }
+        @include desktop {
+            margin-left: 6rem;
+        }
+    }
+    &__header {
+        @include section-header;
+        color: $White;
+        padding-bottom: 0;
+        @include tablet {
+            margin-right: 1.25rem;
+        }
+        @include desktop {
+            margin-right: 4.2rem;
+        }
+    }
+    &__icon {
+        height: 25px;
+        width: 25px;
+        margin-right: 1.25rem;
+        margin-bottom: 1rem;
+        @include tablet {
+            margin-top: 5.3rem;
+        }
+    }
+    &__name {
+        @include body-text;
+        color: $White;
+        margin-bottom: 0;
+    }
+    &__role {
+        @include body-text;
+        color: $White;
+        margin-top: 0.25rem;
+    }
+    &__location {
+        @include body-text;
+        margin-bottom: 0;
+        margin-top: 0.25rem;
+        color: $Silver;
+    }
+    &__email {
+        @include body-text;
+        color: $Silver;
+    }
+    &__copyright {
+        @include body-text;
+        color: $Silver;
+        font-size: .65rem;
+        margin-top: 1rem;
+        @include tablet {
+            @include body-text;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@use 'mixins-fonts' as *;
+@use 'variables' as *;
+@use 'mixins-media' as *;
+
+.navbar {
+    width: 100%;
+    background-color: $BandSite-Black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 24px;
+    @include tablet {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    &__logo-container {
+        max-width: 120px;
+        max-height: 20px;
+        margin: auto;
+        @include tablet {
+            margin: auto 2rem;
+            padding-bottom: 1.75rem;
+        }
+    }
+    &__subheader {
+        @include sub-header;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        color: $Mercury;
+        margin-bottom: 0;
+        @include tablet {
+            align-items: center;
+            margin-left: 2rem;
+        }
+    }
+    &__list-item {
+        @include body-text;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        padding-bottom: 1rem;
+        width: 50%;
+        border-bottom: 4px solid transparent;
+        @include tablet{
+            @include body-text;
+            margin-right: 2rem;
+            padding-bottom: 36px;
+        }
+    }
+    &__list-item:hover {
+        color: $White;
+        border-bottom: 4px solid $White;
+    }
+    &__list-item--current-link {
+        color: $White;
+        border-bottom: 4px solid $White;
+    }
+}
