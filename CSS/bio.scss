@@ -1,4 +1,7 @@
-
+body {
+    margin: 0;
+    font-size: 16px;
+}
 @import "./partials/hero";
 @import "./partials/abt-musicians";
 @import "./partials/Gallery";
