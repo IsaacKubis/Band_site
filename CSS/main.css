@@ -46,7 +46,7 @@
   position: absolute;
   z-index: 2;
   top: 35%;
-  font-family: "Avenir-Bold";
+  font-family: "Avenir-Regular";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
@@ -57,6 +57,11 @@
   .hero__header {
     font-size: 3.75rem;
     line-height: 4.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__header {
+    font-size: 6rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -83,7 +88,7 @@
   src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format(opentype);
 }
 .about__section-header {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir-Demi";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
@@ -100,6 +105,11 @@
     padding-bottom: 2.25rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .about__section-header {
+    font-size: 3rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .about__section-header {
     margin: 0 2.25rem;
@@ -107,7 +117,7 @@
 }
 @media screen and (min-width: 1024px) {
   .about__section-header {
-    margin: 0 6rem;
+    margin: 2rem 6rem;
   }
 }
 .about__image-container {
@@ -156,6 +166,11 @@
     line-height: 2rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .about__quote {
+    font-size: 1.75rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .about__quote {
     margin: 2.25rem 6rem 0 6rem;
@@ -164,6 +179,7 @@
 @media screen and (min-width: 1024px) {
   .about__quote {
     margin: 2.25rem 12rem 0 12rem;
+    width: 60%;
   }
 }
 .about__quote-source {
@@ -180,6 +196,11 @@
     line-height: 2rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .about__quote-source {
+    font-size: 1.75rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .about__quote-source {
     margin: 0.5rem 6rem 0 6rem;
@@ -189,6 +210,7 @@
 @media screen and (min-width: 1024px) {
   .about__quote-source {
     margin: 0.5rem 12rem 0 12rem;
+    font-size: 1.4rem;
   }
 }
 .about__article-header {
@@ -202,6 +224,11 @@
   .about__article-header {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__article-header {
+    font-size: 1.75rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -223,7 +250,7 @@
   .about__article-container {
     flex-direction: row;
     justify-content: space-between;
-    margin: 2rem 6rem 0 6rem;
+    margin: 1rem 6rem 0 6rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -250,6 +277,12 @@
     width: 45%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .about__article {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
 
 @font-face {
   font-family: "Avenir-Bold";
@@ -273,7 +306,7 @@
   }
 }
 .gallery__header {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir-Demi";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
@@ -288,6 +321,11 @@
     line-height: 2.75rem;
     padding-top: 3rem;
     padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .gallery__header {
+    font-size: 3rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -324,12 +362,17 @@
 .gallery__img {
   width: 100%;
   aspect-ratio: 16/9;
+  filter: grayscale(100%);
+  filter: gray;
 }
 @media screen and (min-width: 768px) {
   .gallery__img {
     width: 30%;
     flex-grow: 1;
   }
+}
+.gallery__img:hover {
+  filter: none;
 }
 
 @font-face {
@@ -429,7 +472,7 @@
 @media screen and (min-width: 768px) {
   .footer__logo-container {
     padding-bottom: 1.75rem;
-    margin-top: 5.5rem;
+    margin-top: 6rem;
   }
 }
 .footer__section {
@@ -448,7 +491,7 @@
   }
 }
 .footer__header {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir-Demi";
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
@@ -465,9 +508,15 @@
     padding-bottom: 2.25rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .footer__header {
+    font-size: 3rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer__header {
     margin-right: 1.25rem;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -483,7 +532,7 @@
 }
 @media screen and (min-width: 768px) {
   .footer__icon {
-    margin-top: 5.3rem;
+    margin-top: 6rem;
   }
 }
 .footer__name {
@@ -500,6 +549,11 @@
     line-height: 1.375rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .footer__name {
+    font-size: 1.2rem;
+  }
+}
 .footer__role {
   font-family: "Avenir-Regular";
   font-size: 0.812rem;
@@ -512,6 +566,11 @@
   .footer__role {
     font-size: 0.875rem;
     line-height: 1.375rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__role {
+    font-size: 1.2rem;
   }
 }
 .footer__location {
@@ -529,17 +588,26 @@
     line-height: 1.375rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .footer__location {
+    font-size: 1.2rem;
+  }
+}
 .footer__email {
   font-family: "Avenir-Regular";
   font-size: 0.812rem;
   font-weight: 400;
   line-height: 1.125;
-  color: #AFAFAF;
 }
 @media screen and (min-width: 768px) {
   .footer__email {
     font-size: 0.875rem;
     line-height: 1.375rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__email {
+    font-size: 1.2rem;
   }
 }
 .footer__copyright {
@@ -570,4 +638,13 @@
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
+}
+@media screen and (min-width: 1024px) {
+  .footer__copyright {
+    font-size: 1.2rem;
+  }
+}
+.footer__email-link {
+  color: #AFAFAF;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */

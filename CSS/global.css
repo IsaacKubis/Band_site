@@ -40,6 +40,11 @@ body {
     padding-bottom: 1.75rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .navbar__logo-container {
+    margin: auto 6rem;
+  }
+}
 .navbar__subheader {
   font-family: "Avenir-Demi";
   font-size: 0.875rem;
@@ -50,6 +55,11 @@ body {
   .navbar__subheader {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar__subheader {
+    font-size: 1.75rem;
   }
 }
 .navbar__list {
@@ -75,7 +85,7 @@ body {
   justify-content: center;
   padding-bottom: 1rem;
   width: 50%;
-  border-bottom: 4px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 @media screen and (min-width: 768px) {
   .navbar__list-item {
@@ -101,9 +111,9 @@ body {
 }
 .navbar__list-item:hover {
   color: #FFFFFF;
-  border-bottom: 4px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }
 .navbar__list-item--current-link {
   color: #FFFFFF;
-  border-bottom: 4px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }/*# sourceMappingURL=global.css.map */

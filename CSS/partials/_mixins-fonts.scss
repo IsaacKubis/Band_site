@@ -17,18 +17,21 @@
 }
 
 @mixin page-header {
-        font-family: 'Avenir-Bold';
+        font-family: 'Avenir-Regular';
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 2rem;        
         @include tablet {
             font-size: 3.75rem;
             line-height: 4.25rem;
-        }  
+        }
+        @include desktop {
+            font-size: 6rem;
+        }
 }
 
 @mixin section-header {
-    font-family: 'Avenir-Bold';
+    font-family: 'Avenir-Demi';
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2rem;
@@ -40,6 +43,9 @@
         padding-top: 3rem;
         padding-bottom: 2.25rem;
     }
+    @include desktop {
+        font-size: 3rem;
+    }
 }
 
 @mixin sub-header {
@@ -50,6 +56,9 @@
     @include tablet {
         font-size: 1.5rem;
         line-height: 2rem;
+    }
+    @include desktop {
+        font-size: 1.75rem;
     }
 }
 

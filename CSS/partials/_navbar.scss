@@ -21,6 +21,9 @@
             margin: auto 2rem;
             padding-bottom: 1.75rem;
         }
+        @include desktop {
+            margin: auto 6rem;
+        }
     }
     &__subheader {
         @include sub-header;
@@ -43,7 +46,7 @@
         justify-content: center;
         padding-bottom: 1rem;
         width: 50%;
-        border-bottom: 4px solid transparent;
+        border-bottom: 3px solid transparent;
         @include tablet{
             @include body-text;
             margin-right: 2rem;
@@ -52,10 +55,10 @@
     }
     &__list-item:hover {
         color: $White;
-        border-bottom: 4px solid $White;
+        border-bottom: 3px solid $White;
     }
     &__list-item--current-link {
         color: $White;
-        border-bottom: 4px solid $White;
+        border-bottom: 3px solid $White;
     }
 }
