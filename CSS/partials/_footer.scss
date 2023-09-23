@@ -107,7 +107,7 @@
         color: $White;
         margin-bottom: 0;
         @include desktop {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     }
     &__role {
@@ -115,7 +115,7 @@
         color: $White;
         margin-top: 0.25rem;
         @include desktop {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     }
     &__location {
@@ -124,13 +124,13 @@
         margin-top: 0.25rem;
         color: $Silver;
         @include desktop {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     }
     &__email {
         @include body-text;
         @include desktop {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
     }
     &__copyright {

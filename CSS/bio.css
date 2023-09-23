@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  font-size: 16px;
+}
+
 @font-face {
   font-family: "Avenir-Bold";
   src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") format(opentype);
@@ -551,7 +556,7 @@
 }
 @media screen and (min-width: 1024px) {
   .footer__name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 .footer__role {
@@ -570,7 +575,7 @@
 }
 @media screen and (min-width: 1024px) {
   .footer__role {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 .footer__location {
@@ -590,7 +595,7 @@
 }
 @media screen and (min-width: 1024px) {
   .footer__location {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 .footer__email {
@@ -607,7 +612,7 @@
 }
 @media screen and (min-width: 1024px) {
   .footer__email {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 .footer__copyright {
@@ -647,4 +652,4 @@
 .footer__email-link {
   color: #AFAFAF;
   text-decoration: none;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=bio.css.map */
