@@ -1,0 +1,97 @@
+@use 'mixins-fonts' as *;
+@use 'variables' as *;
+@use 'mixins-media' as *;
+
+
+.shows {
+    // margin: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        margin: 0 3rem 0 3rem;
+        flex-direction: column;
+    }
+    @include desktop {
+        flex-direction: row;
+        margin: 0 6rem 0 6rem;
+    }
+    &__table {
+        border-collapse: collapse; 
+        border-spacing: 1rem;
+        margin: 1rem 0 4rem 0;
+        width: 100%;
+        @include desktop {
+            margin: 6.3rem 0 4rem 6rem;
+            border-spacing:0 4rem;
+        }
+    }
+    &__div {
+        border-bottom: 2px solid $Silver;
+        padding: 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+    &__div:last-of-type {
+        margin-bottom: 1.5rem;
+    }
+    &__table-row {
+        justify-content: center;
+        border-collapse: collapse;
+        border-bottom: 2px solid $Silver;
+        &--table-row-active {
+            background-color: $Mercury;
+        }
+    }
+    &__table-row:hover {
+        background-color: $Alabaster;
+    }
+    &__header {
+        @include section-header;
+        margin-left: 1rem;
+        @include tablet {
+            padding-bottom: 0;
+        margin-bottom: 0;
+        }
+        @include desktop {
+
+        }
+    }
+    &__table-header, &__label {
+        @include sub-header;
+        color: $Silver;
+        margin-bottom: 0;
+        @include tablet {
+            font-size: 1rem;
+            padding-left: 1rem;
+        }
+    }
+    &__item {
+        @include body-text;
+        color: $BandSite-Black;
+        margin-top: 0;
+        font-size: .95rem;
+        @include tablet {
+            font-size: 1rem;
+            padding-left: 1rem;
+        }
+        &--date {
+            @include sub-header;
+            @include tablet {
+            font-size: 1.1rem;
+            }
+        }
+    }
+    &__button {
+        height: 40px;
+        padding: 0 32px 0 32px;
+        border-radius: 4px;
+        border: none;
+        background-color: $BandSite-Black;
+        color: $Alabaster;
+        margin: 1.5rem 0 1.5rem 0;
+        width: 100%;
+        @include tablet {
+            min-width: 150px;
+            width: 80%;
+        }
+    }
+}
