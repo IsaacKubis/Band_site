@@ -215,6 +215,11 @@ body {
 @media screen and (min-width: 768px) {
   .footer__logo-container {
     padding-bottom: 1.75rem;
+    margin-top: 5.3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__logo-container {
     margin-top: 6rem;
   }
 }
@@ -274,6 +279,11 @@ body {
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
+  .footer__icon {
+    margin-top: 5.3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
   .footer__icon {
     margin-top: 6rem;
   }

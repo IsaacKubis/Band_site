@@ -79,8 +79,7 @@ function insert_array_data() {
             }
 
         } else { //Desktop from here on 
-
-            var i = 0;
+            let i = 0;
             const newTable = document.createElement("table");
             newTable.innerHTML = "";
             newTable.setAttribute("id","tableId");
@@ -143,8 +142,3 @@ function insert_array_data() {
             row.classList.add("shows__table-row--table-row-active");
         }
 }
-
-
-
-// nvidia a100 (memory speed of ~2tb/s)
-// chatgpt went from ~45tb to ~1 petabyte (still extremely small dataset, google processes around 2.5exabytes a day)

@@ -1,0 +1,172 @@
+@use 'mixins-fonts' as *;
+@use 'variables' as *;
+@use 'mixins-media' as *;
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__flex-container {
+        display: flex;
+        margin:0 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid $Mercury;
+        @include tablet {
+            margin: 2rem auto;
+            width: 60%;
+        }
+        @include desktop {
+            margin: 2rem auto;
+        }
+    }
+    &__header {
+        margin-left: 1rem;
+        @include section-header;
+        color: $BandSite-Black;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        @include tablet {
+            margin-left: 3rem;
+        }
+        @include desktop {
+            margin-left: 6rem;
+        }
+    }
+    &__form {
+        width: 100%;
+        margin:1rem;
+        @include tablet {
+        }
+        @include desktop {
+        }
+    }
+    &__label {
+        @include label;
+        font-family: "avenir-Regular";
+        color: $Silver;
+        font-size: .75rem;
+        &--separator {
+            margin-top: 2rem;
+            display:inline-block;
+        }
+    }
+    &__form-name, &__form-textarea {
+        width: 100%;
+        background-color: $Alabaster;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 2px solid $Mercury;
+    }
+    ::placeholder {
+        color: $BandSite-Black;
+    }
+    &__form-name {
+        min-height: 36px;
+        border-radius: 5px;
+        padding-left: .5rem;
+        padding-top: .25rem; // text align center for input
+        // border-color: $Mercury;
+        @include body-text;
+        color: $BandSite-Black;
+        @include desktop {
+            padding-left: 1rem;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+    }
+    &__form-textarea {
+        resize: none;
+        @include body-text;
+        color: $BandSite-Black;
+        padding-left: .5rem;
+        padding-top: .75rem;
+        @include desktop {
+            padding-left: 1rem;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+    }
+    &__image-container {
+        border-radius: 50%;
+        max-width: 36px;
+        max-height: 36px;
+        overflow: hidden;
+        margin-top: 2.2rem;
+        @include desktop {
+            width: 80px;
+            height: 80px;
+        }
+        &--grey {
+            background-color: $Mercury;
+            min-height: 36px;
+            min-width: 36px;
+            margin-top: 0;
+            margin-right: 1rem;
+        }
+    }
+    &__image {
+        object-fit: cover;
+        min-width: 100%;
+        height: 100%;
+    }
+    &__button {
+        margin-top: 1rem;
+        width: 100%;
+        border: none;
+        background-color: $BandSite-Black;
+        color: $White;
+        border-radius: 5px;
+        height: 40px;
+        letter-spacing: 1px;
+        @include body-text;
+        font-family: "avenir-Demi";
+        @include tablet {
+            width: 30%;
+            min-width: 150px;
+            float: right;
+        }
+    }
+
+&__container {
+    display: flex;
+    flex-direction: column;
+}
+    &__flex-div {
+        display: flex;
+        margin: 0 1rem;
+        border-bottom: 2px solid $Mercury;
+        margin-bottom: 1rem;
+        @include tablet {
+            width: 70%;
+            margin: 2rem auto;
+        }
+        @include desktop {
+            width: 60%;
+        }
+    }
+    &__comment-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__name, &__date, &__comment {
+        @include body-text;
+        color: $BandSite-Black;
+        margin-top: 0;
+        @include desktop {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+    }
+    &__name {
+        font-family: "avenir-Demi"
+    }
+    &__date {
+        color: $Silver  ;
+    }
+    &__comment {
+        width: 100%;
+    }
+}
+
