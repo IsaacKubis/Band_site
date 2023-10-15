@@ -109,8 +109,14 @@ body {
     line-height: 1.375rem;
   }
 }
-.navbar__list-item:hover {
+.navbar__list-item-link {
+  text-decoration: none;
+  color: #E1E1E1;
+}
+.navbar__list-item-link:hover {
   color: #FFFFFF;
+}
+.navbar__list-item:hover {
   border-bottom: 3px solid #FFFFFF;
 }
 .navbar__list-item--current-link {

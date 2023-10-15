@@ -53,8 +53,14 @@
             padding-bottom: 36px;
         }
     }
-    &__list-item:hover {
+    &__list-item-link {
+        text-decoration: none;
+        color: $Mercury;
+    }
+    &__list-item-link:hover {
         color: $White;
+    }
+    &__list-item:hover {
         border-bottom: 3px solid $White;
     }
     &__list-item--current-link {
