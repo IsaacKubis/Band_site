@@ -10,11 +10,11 @@
 <body>
     <nav class="navbar">
         <div class="navbar__logo-container">
-            <img src="./Assets/Logo/Logo-bandsite.svg" alt="Bandsite logo" class="navbar__logo">
+            <a href="index.html"><img src="./Assets/Logo/Logo-bandsite.svg" alt="Bandsite logo" class="navbar__logo"></a>
         </div>
         <ul class="navbar__list">
             <li class="navbar__list-item navbar__list-item--current-link"><span><a></a>Biography</span></li>
-            <li class="navbar__list-item"><span><a></a>Shows</span></li>
+            <li class="navbar__list-item"><span><a href="./Pages/shows.html" class="navbar__list-item-link">Shows</a></span></li>
         </ul>
     </nav>
     <section class="hero">
@@ -75,6 +75,23 @@
             <img src="./Assets/Images/Photo-gallery-9.jpg" alt="" class="gallery__img">
         </div>
     </section>
+    <section class="comments">
+        <h2 class="comments__header">Join the Conversation</h2>
+        <div class="comments__flex-container">
+            <div class="comments__image-container">
+                <img src="./Assets/Images/Mohan-muruge.jpg" alt="image of a person" class="comments__image">
+            </div>
+            <form class="comments__form" id="comments__form" onsubmit="return false">
+                <label for="form-uname" class="comments__label">NAME</label>
+                <input type="text" id="form-uname" class="comments__form-name" placeholder="Enter your name" value="">
+                <label for="form-comment" class="comments__label comments__label--separator">COMMENT</label>
+                <textarea id="form-comment" class="comments__form-textarea" rows="5" placeholder="Add a new comment"></textarea>
+                <input type="submit" value="COMMENT" class="comments__button">
+            </form>
+        </div>
+        <div id="comments" class="comments__container">
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer__header-section">
             <h2 class="footer__header">Get in Touch</h2>
@@ -109,12 +126,13 @@
         </div>
         <div class="footer__logo-section">
             <div class="footer__logo-container">
-                <img src="./Assets/Logo/Logo-bandsite.svg" alt="logo" class="footer__logo">
+                <a href="index.html"><img src="./Assets/Logo/Logo-bandsite.svg" alt="logo" class="footer__logo"></a>
             </div>
         </div>
         <div class="footer__copyright-section">
             <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </div>
     </footer>
+    <script src="./javascript/comments.js"></script>
 </body>
 </html>
