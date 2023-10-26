@@ -1,29 +1,26 @@
-let comments = [
-    {
-        Name: "Connor Walton",
-        Date: "10/12/2023",
-        Comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-    },
-    {
-        Name: "Emilie Beach",
-        Date: "02/17/2023",
-        Comment: "This is art. This is inexplicable magic, expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-    },
-    {
-        Name: "Miles Acosta",
-        Date: "12/20/2018",
-        Comment: "I can t stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can t get enough."
-    }
-]
+
+const apiUrlComments = 'https://project-1-api.herokuapp.com/comments?api_key=1f801dad-9c1c-4a9f-a98a-8c566c228b86'
+
+window.onload = getComments();
+function getComments() {
+    axios.get(apiUrlComments).then(response => {
+        createComments(response.data);
+    });
+}
+
+function pushToApi(userObject) {
+    axios.post(apiUrlComments, userObject).then(response => {
+        getComments();
+    });
+}
+
 const form = document.getElementById("comments__form");
 form.addEventListener("submit", newComment);
 
-window.onload = (createComments);
 function newComment() {
     let name = document.getElementById("form-uname").value;
     let comment = document.getElementById("form-comment").value;
-    let date = new Date().toISOString().slice(0, 10)
-    let userObject = {Name: name, Date: date, Comment: comment};
+    let userObject = {name: name, comment: comment};
     if (name == "" || comment == ""){
         if(name =="") {
             document.getElementById("form-uname").classList.add("comments__form-name--empty")
@@ -34,19 +31,17 @@ function newComment() {
     } else{
         document.querySelector("input", ".comments__form-name--empty").classList.remove("comments__form-name--empty")
         document.querySelector("textarea", ".comments__form-textarea--empty").classList.remove("comments__form-textarea--empty")
-        comments.unshift(userObject);
-        console.log(userObject);
         document.getElementById("form-comment").value = "";
         document.getElementById("form-uname").value = "";
-        createComments();
+        pushToApi(userObject);
     }
-    
 }
-function createComments() {
+function createComments(data) {
     let i = 0
     const target = document.getElementById("comments");
     target.innerHTML = "";
-        for(comment of comments){
+    const sortedArray = data.sort((objA, objB) => Number(objB.timestamp) - Number(objA.timestamp));
+        for(comment of data){
                 const newDiv = document.createElement("div");
                 const imageContainer = document.createElement("div");
                 const commentDiv = document.createElement("div");
@@ -56,15 +51,21 @@ function createComments() {
                 newDiv.appendChild(imageContainer);
                 for(const[key, value] of Object.entries(comment)) {
                     let p = document.createElement("p");
-                    p.textContent = value;
-                    if(key == "Name"){
+                    if(key == "name"){
                         p.classList.add("comments__name");
-                    } else if(key == "Date") {
+                        p.textContent = value;
+                    } else if(key == "timestamp") {
                         p.classList.add("comments__date");
                         dateComparison(value);
                         p.textContent = "posted "+days+unitOfTime
-                    } else {
+                    } else if (key == 'id'){
+                        continue;
+                    } else if (key == 'comment'){
                         p.classList.add("comments__comment");
+                        p.textContent = value;
+                    } else if (key == 'likes'){
+                        p.textContent = value + ' likes';
+                        p.classList.add("comments__likes")
                     }
                     commentDiv.appendChild(p);
                 }
@@ -97,14 +98,18 @@ function dateComparison(value) {
         let dayNum = hours/24;
         days = Math.floor(dayNum);
         unitOfTime = " Days ago."
+    } else if(compareDate > hour && compareDate < day) {
+        let hours = compareDate/hour;
+        days = Math.floor(hours);
+        unitOfTime = " Hours ago."
     } else if (compareDate < hour && compareDate > minute) {
         let minutes = compareDate/minute;
-        days = math.floor(minute)
+        days = Math.floor(minutes)
         unitOfTime = " Minutes ago."
     } else {
-        let seconds = compareDate/minute/60;
-        days = Math.floor(seconds);
-        unitOfTime = " Seconds ago."
+        // let seconds = compareDate/minute/60;
+        days = ' ';
+        unitOfTime = "just now"
     }
     
 }
