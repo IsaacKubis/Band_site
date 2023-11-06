@@ -15,9 +15,10 @@ function pushToApi(userObject) {
 }
 
 const form = document.getElementById("comments__form");
-form.addEventListener("submit", newComment);
+form.addEventListener("submit", newComment, false);
 
-function newComment() {
+function newComment(event) {
+    event.preventDefault();
     let name = document.getElementById("form-uname").value;
     let comment = document.getElementById("form-comment").value;
     let userObject = {name: name, comment: comment};
@@ -107,9 +108,8 @@ function dateComparison(value) {
         days = Math.floor(minutes)
         unitOfTime = " Minutes ago."
     } else {
-        // let seconds = compareDate/minute/60;
         days = ' ';
         unitOfTime = "just now"
     }
-    
+
 }
