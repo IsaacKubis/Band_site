@@ -628,7 +628,7 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-.comments__name, .comments__date, .comments__comment {
+.comments__name, .comments__date, .comments__comment, .comments__likes {
   font-family: "Avenir-Regular";
   font-size: 0.812rem;
   font-weight: 400;
@@ -637,23 +637,29 @@ body {
   margin-top: 0;
 }
 @media screen and (min-width: 768px) {
-  .comments__name, .comments__date, .comments__comment {
+  .comments__name, .comments__date, .comments__comment, .comments__likes {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .comments__name, .comments__date, .comments__comment {
+  .comments__name, .comments__date, .comments__comment, .comments__likes {
     font-size: 1.2rem;
     line-height: 1.7rem;
   }
 }
 .comments__name {
   font-family: "avenir-Demi";
+  order: 1;
 }
 .comments__date {
   color: #AFAFAF;
+  order: 2;
 }
 .comments__comment {
   width: 100%;
+  order: 3;
+}
+.comments__likes {
+  order: 4;
 }/*# sourceMappingURL=bio.css.map */

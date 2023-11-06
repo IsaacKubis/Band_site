@@ -6,6 +6,7 @@
     <title>Band-site</title>
     <link href="./CSS/bio.css" rel="stylesheet">
     <link href="./CSS/global.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" type="text/javascript"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -81,7 +82,7 @@
             <div class="comments__image-container">
                 <img src="./Assets/Images/Mohan-muruge.jpg" alt="image of a person" class="comments__image">
             </div>
-            <form class="comments__form" id="comments__form" onsubmit="return false">
+            <form class="comments__form" id="comments__form">
                 <label for="form-uname" class="comments__label">NAME</label>
                 <input type="text" id="form-uname" class="comments__form-name" placeholder="Enter your name" value="">
                 <label for="form-comment" class="comments__label comments__label--separator">COMMENT</label>
@@ -136,3 +137,5 @@
     <script src="./javascript/comments.js"></script>
 </body>
 </html>
+
+<!-- {"api_key":"1f801dad-9c1c-4a9f-a98a-8c566c228b86"} -->
